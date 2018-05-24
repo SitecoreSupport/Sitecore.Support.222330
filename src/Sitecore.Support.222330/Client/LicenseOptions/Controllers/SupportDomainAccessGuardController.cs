@@ -51,7 +51,7 @@ namespace Sitecore.Support.Client.LicenseOptions.Controllers
       return GetResult(new ResultMessage
       {
         Status = ResultStatus.Success,
-        Message = WebUtil.GetFullUrl(new LicenseOptions::Sitecore.Client.LicenseOptions.StartUrlManager().GetStartUrl(Context.User))
+        Message = new LicenseOptions::Sitecore.Client.LicenseOptions.StartUrlManager().GetStartUrl(Context.User)
       });
     }
     protected JsonResult GetResult(object data)
